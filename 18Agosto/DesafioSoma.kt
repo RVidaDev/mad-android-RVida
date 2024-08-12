@@ -7,4 +7,6 @@ fun somaDosQuadrados(a: Int, b: Int) : Int {
 
     println("a soma dos quadrados de %a e %b é %resultado")
 
+    return resultado
+
 }
