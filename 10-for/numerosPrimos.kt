@@ -1,26 +1,26 @@
 fun main() {
-    println("Escreva um numero: ")
-    val num = readLine()
+    println("Digite um número: ")
+    val input = readLine()
 
-    val numInt = num.toIntOrNull()
+    val num = input?.toIntOrNull()
 
-    if (numInt == null || numInt <= 0) {
-        println("Número inválido")
+    if (num == null || num <= 1) {
+        println("Número inválido. Por favor, digite um número inteiro maior que 1.")
         return
     }
 
     var isPrime = true
 
-    for (i in 2 until numInt) {
-        if (numInt % i == 0) {
+    for (i in 2 until num) {
+        if (num % i == 0) {
             isPrime = false
             break
         }
     }
 
     if (isPrime) {
-        println("$numInt é um número primo")
+        println("$num é um número primo")
     } else {
-        println("$numInt não é um número primo")
+        println("$num não é um número primo")
     }
 }
